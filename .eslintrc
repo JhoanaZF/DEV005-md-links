@@ -3,6 +3,7 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 8
+    "ecmaVersion": 2015,
+    "sourceType": "module"
   }
 }

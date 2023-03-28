@@ -3,5 +3,35 @@
   "version": "0.1.0",
   "engines": {
     "node": ">=16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhoanaZF/DEV005-md-links"
+  },
+  "description": "Librería para buscar links, verificar el estado de validez y obtener estadísticas de archivos tipo md",
+  "author": {
+    "name": "Jhoana Zamora",
+    "email": "jhoanazamora2@gmail.com"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --ext .js test/",
+    "test": "jest --verbose --coverage",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "mdLinks",
+    "Markdown",
+    "links"
+  ],
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0"
   }
 }
