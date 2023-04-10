@@ -60,12 +60,7 @@ const getFileLinksInfo = (filePath, options) => {
       return getLinkInfo(extractedLinks, filePath, options);
     })
     .catch((error) => {
-      console.log(
-        chalk.red(
-          `Encontramos un error: La ruta o el archivo no es válida.`,
-          error
-        )
-      );
+      chalk.red.italic(`The path or file is invalid.`);
     });
 };
 
