@@ -9,6 +9,7 @@ import {
 } from "./myFuncions.js";
 import { promises as fs } from "fs";
 import path from "path";
+
 /* Función que recibe como argumento la ruta de un archivo o directorio después se extraen los enlaces en el archivo Markdown, 
 si es un directorio ejecuta la función extractDirectoryLinks */
 const mdLinks = (paths, options) => {
