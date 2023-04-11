@@ -60,7 +60,7 @@ const getFileLinksInfo = (filePath, options) => {
       return getLinkInfo(extractedLinks, filePath, options);
     })
     .catch((error) => {
-      chalk.red.italic(`The path or file is invalid.`);
+      console.log(chalk.red.italic(error));
     });
 };
 
