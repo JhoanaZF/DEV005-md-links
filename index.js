@@ -6,7 +6,7 @@ import {
   readDirectoryAndExtractFilesMd,
   getFileLinksInfo,
   extractDirectoryLinks,
-} from "./myFuncions.js";
+} from "./myFunctions.js";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -32,9 +32,4 @@ const mdLinks = (paths, options) => {
       return null;
     });
 };
-
-mdLinks("./pruebas", {
-  validate: true,
-}).then((links) => {
-  console.log(links);
-});
+export { mdLinks };

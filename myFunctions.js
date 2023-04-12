@@ -96,6 +96,23 @@ const extractDirectoryLinks = (directoryPath, options) => {
   });
 };
 
+//Función que calcula las estadísticas básicas de los links encontrados, incluyendo el número total de links encontrados y el número de links únicos.
+const calculateLinksStats = (response) => {
+  return {
+    total: response.length,
+    unique: new Set(response.map(({ href }) => href)).size,
+  };
+};
+
+//Función calcula las estadísticas de los links encontrados, incluyendo la cantidad total de links, la cantidad de links únicos y la cantidad de links rotos o no funcionales.
+const calculateBrokenLinksStats = (response) => {
+  const brokens = response.filter((link) => link.ok === "❌FAIL❌").length;
+  return {
+    total: response.length,
+    unique: new Set(response.map(({ href }) => href)).size,
+    broken: brokens,
+  };
+};
 export {
   convertToAbsolutePath,
   extractLinksFromHtml,
@@ -103,4 +120,6 @@ export {
   readDirectoryAndExtractFilesMd,
   getFileLinksInfo,
   extractDirectoryLinks,
+  calculateLinksStats,
+  calculateBrokenLinksStats,
 };
