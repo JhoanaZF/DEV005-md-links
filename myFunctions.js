@@ -104,7 +104,7 @@ const calculateLinksStats = (response) => {
   };
 };
 
-//Función calcula las estadísticas de los links encontrados, incluyendo la cantidad total de links, la cantidad de links únicos y la cantidad de links rotos o no funcionales.
+//Función que calcula las estadísticas de los links encontrados, incluyendo la cantidad total de links, la cantidad de links únicos y la cantidad de links rotos o no funcionales.
 const calculateBrokenLinksStats = (response) => {
   const brokens = response.filter((link) => link.ok === "❌FAIL❌").length;
   return {
