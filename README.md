@@ -28,14 +28,19 @@ md-links es una librería desarrollada en Node.js que facilita la lectura y aná
 
 ## 3. Diagrama de flujo
 
-[Diagrama](img/thumb.jpg)
+![Diagrama](img/thumb.jpg)
 
 ## 4. Guía de instalación
 
+```sh
+npm i JhoanaZF/DEV005-md-links
+```
+
 ## 5. Guía de uso
 
-El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
-manera a través de la **terminal**:
+- Uso desde la línea de comandos:
+  El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
+  manera a través de la **terminal**:
 
 `md-links <path-to-file>`
 
@@ -45,7 +50,7 @@ Por ejemplo:
 $ md-links ./pruebas
 ```
 
-[Default](img/default.png)
+![Default](img/default.png)
 
 El comportamiento por defecto no debe valida si las URLs responden ok o no,
 solo identifica el archivo markdown (a partir de la ruta que recibe como argumento), analiza el archivo Markdown e imprime los links que vaya
@@ -65,10 +70,10 @@ Por ejemplo:
 $ md-links ./pruebas --validate
 ```
 
-[Validate](img/validate.png)
+![Validate](img/validate.png)
 
 Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
-la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
+la URL, así como zel status de la respuesta recibida a la petición HTTP a dicha
 URL.
 
 ##### `--stats`
@@ -82,7 +87,7 @@ Por ejemplo:
 $ md-links ./pruebas --stats
 ```
 
-[Stats](img/stats.png)
+![Stats](img/stats.png)
 
 ##### `--stats` `--validate`
 
@@ -95,4 +100,26 @@ Por ejemplo:
 $ md-links ./pruebas --stats --validate
 ```
 
-[Stats/Validate](img/s-v.png)
+![Stats/Validate](img/s-v.png)
+
+- Uso desde una aplicación Node.js:
+  También puedes usar el módulo desde una aplicación Node.js. Para ello, importa la función mdLinks desde el módulo y llámala con los parámetros correspondientes:
+
+` *import { mdLinks } from 'JhoanaZF/DEV005-md-links';`
+
+**Ejemplo:**
+
+```sh
+*mdLinks('<path-to-file-or-directory>', { validate: true, stats: true })
+.then(links => {
+  console.log(links);
+})
+.catch(error => {
+  console.error(error);
+});*
+```
+
+**Donde:**
+
+- `path-to-file-or-directory`: Ruta del archivo o directorio Markdown a analizar.
+- `{ validate: true, stats: true }`: Objeto con opciones que permiten validar los links y obtener estadísticas de los mismos.
