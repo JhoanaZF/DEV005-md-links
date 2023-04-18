@@ -103,7 +103,7 @@ $ md-links ./pruebas --stats --validate
 ![Stats/Validate](img/s-v.png)
 
 - **Uso desde una aplicación Node.js:**
-  También puedes usar el módulo desde una aplicación Node.js. Para ello, importa la función mdLinks desde el módulo y llámala con los parámetros correspondientes:
+  También puedes usar el módulo desde una aplicación **Node.js**. Para ello, importa la función mdLinks desde el módulo y llámala con los parámetros correspondientes:
 
 ` *import { mdLinks } from 'md-links';`
 
