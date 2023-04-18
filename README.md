@@ -122,4 +122,4 @@ $ md-links ./pruebas --stats --validate
 **Donde:**
 
 - `path-to-file-or-directory`: Ruta del archivo o directorio Markdown a analizar.
-- `{ validate: true, stats: true }`: Objeto con opciones que permiten validar los links y obtener estadísticas de los mismos.
+- `{ validate: true }`: Objeto con opciones que permiten validar los links y obtener estadísticas de los mismos.
