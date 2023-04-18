@@ -38,7 +38,7 @@ npm i JhoanaZF/DEV005-md-links
 
 ## 5. Guía de uso
 
-- Uso desde la línea de comandos:
+- **Uso desde la línea de comandos:**
   El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
   manera a través de la **terminal**:
 
@@ -102,15 +102,15 @@ $ md-links ./pruebas --stats --validate
 
 ![Stats/Validate](img/s-v.png)
 
-- Uso desde una aplicación Node.js:
+- **Uso desde una aplicación Node.js:**
   También puedes usar el módulo desde una aplicación Node.js. Para ello, importa la función mdLinks desde el módulo y llámala con los parámetros correspondientes:
 
-` *import { mdLinks } from 'JhoanaZF/DEV005-md-links';`
+` *import { mdLinks } from 'md-links';`
 
 **Ejemplo:**
 
 ```sh
-*mdLinks('<path-to-file-or-directory>', { validate: true, stats: true })
+*mdLinks('<path-to-file-or-directory>', { validate: true})
 .then(links => {
   console.log(links);
 })
