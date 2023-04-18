@@ -1,5 +1,4 @@
 // Importacion de los modulos
-import chalk from "chalk";
 import Cheerio from "cheerio";
 import { promises as fs, readdirSync, statSync } from "fs";
 import { marked } from "marked";
@@ -60,7 +59,7 @@ const getFileLinksInfo = (filePath, options) => {
       return getLinkInfo(extractedLinks, filePath, options);
     })
     .catch((error) => {
-      console.log(chalk.red.italic(error));
+      error;
     });
 };
 
@@ -96,7 +95,7 @@ const extractDirectoryLinks = (directoryPath, options) => {
   });
 };
 
-//Función que calcula las estadísticas básicas de los links encontrados, incluyendo el número total de links encontrados y el número de links únicos.
+// Función que calcula las estadísticas básicas de los links encontrados, incluyendo el número total de links encontrados y el número de links únicos.
 const calculateLinksStats = (response) => {
   return {
     total: response.length,
@@ -104,7 +103,7 @@ const calculateLinksStats = (response) => {
   };
 };
 
-//Función que calcula las estadísticas de los links encontrados, incluyendo la cantidad total de links, la cantidad de links únicos y la cantidad de links rotos o no funcionales.
+// Función que calcula las estadísticas de los links encontrados, incluyendo la cantidad total de links, la cantidad de links únicos y la cantidad de links rotos o no funcionales.
 const calculateBrokenLinksStats = (response) => {
   const brokens = response.filter((link) => link.ok === "❌FAIL❌").length;
   return {
@@ -113,6 +112,7 @@ const calculateBrokenLinksStats = (response) => {
     broken: brokens,
   };
 };
+
 export {
   convertToAbsolutePath,
   extractLinksFromHtml,

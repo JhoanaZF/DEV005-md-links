@@ -43,8 +43,9 @@ Por ejemplo:
 
 ```sh
 $ md-links ./pruebas
-[Default](img/default.png)
 ```
+
+[Default](img/default.png)
 
 El comportamiento por defecto no debe valida si las URLs responden ok o no,
 solo identifica el archivo markdown (a partir de la ruta que recibe como argumento), analiza el archivo Markdown e imprime los links que vaya
@@ -62,8 +63,9 @@ Por ejemplo:
 
 ```sh
 $ md-links ./pruebas --validate
-[Validate](img/validate.png)
 ```
+
+[Validate](img/validate.png)
 
 Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
 la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
@@ -78,8 +80,9 @@ Por ejemplo:
 
 ```sh
 $ md-links ./pruebas --stats
-[Stats](img/stats.png)
 ```
+
+[Stats](img/stats.png)
 
 ##### `--stats` `--validate`
 
@@ -90,5 +93,6 @@ Por ejemplo:
 
 ```sh
 $ md-links ./pruebas --stats --validate
-[Stats/Validate](img/s-v.png)
 ```
+
+[Stats/Validate](img/s-v.png)

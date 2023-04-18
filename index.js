@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import {
   convertToAbsolutePath,
   extractLinksFromHtml,
@@ -22,13 +21,11 @@ const mdLinks = (paths, options) => {
       } else if (pathStats.isFile() && path.extname(absolutePath) === ".md") {
         return getFileLinksInfo(absolutePath, options);
       } else {
-        throw new Error(
-          chalk.red.italic(`The path must be a Markdown file or a directory.`)
-        );
+        throw new Error(`The path must be a Markdown file or a directory.`);
       }
     })
     .catch((error) => {
-      console.log(chalk.red.italic(error));
+      console.log(error);
       return null;
     });
 };
