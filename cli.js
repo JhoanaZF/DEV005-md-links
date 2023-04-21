@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// import chalk from "chalk";
+import chalk from "chalk";
 import { mdLinks } from "./index.js";
 import {
   calculateBrokenLinksStats,
