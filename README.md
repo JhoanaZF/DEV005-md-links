@@ -110,7 +110,7 @@ $ md-links ./pruebas --stats --validate
 **Ejemplo:**
 
 ```sh
-*mdLinks('<path-to-file-or-directory>', { validate: true})
+*mdLinks('<path-to-file-or-directory>', { validate: false})
 .then(links => {
   console.log(links);
 })
